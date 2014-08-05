@@ -18,11 +18,9 @@ function onSuccess(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
   var coordsArray = [latitude, longitude];
-    console.log(coordsArray);
-
   var displayGeo = document.getElementById('coords');
   displayGeo.innerHTML = ("Lat: " + coordsArray[0] + "<br />Long: " + coordsArray[1]);
-  showTheMap(coordsArray);
+  loadDynamicMap(coordsArray);
 }
 
 function onError(error) {
@@ -31,3 +29,14 @@ function onError(error) {
 
 var btnGeo = document.getElementById('trigger_geolocation');
 btnGeo.addEventListener("click", requestLocation);
+
+function loadDynamicMap(coordsArray) {
+  var latitude = coordsArray[0];
+  var longitude = coordsArray[1];
+  var mapOptions = {
+   zoom: 16,
+   center: new google.maps.LatLng(latitude, longitude)
+ };
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+     mapOptions);
+}
