@@ -37,6 +37,7 @@ function loadDynamicMap(coordsArray) {
    zoom: 16,
    center: new google.maps.LatLng(latitude, longitude)
  };
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-     mapOptions);
+  var mapCanvas = document.getElementById('map-canvas');
+  mapCanvas.classList.add('map-loaded');
+  var map = new google.maps.Map(mapCanvas,mapOptions);
 }
