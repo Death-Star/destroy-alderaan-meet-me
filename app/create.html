@@ -32,43 +32,47 @@
         </nav>
         <h1>CREATE A NEW LOCATION</h1>
 
-        <form role="form">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input require class="form-control" id="exampleInputEmail1" placeholder="Enter_Name">
+      
+
+        <form class='col-sm-offset' role="form">
+          <div class='form-group col-lg-2'>
+            <label for="name">Name</label>
+            <input required class="form-control" id="name" placeholder="Enter_Name">
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">City</label>
-            <input  require class="form-control" id="exampleInputPassword1" placeholder="Enter_City">
-          </div>
-           <div class="form-group">
-            <label for="exampleInputEmail1">Zip_Code</label>
-            <input  require class="form-control" id="exampleInputEmail1" placeholder="Enter_Zip_code">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Street</label>
-            <input  require class="form-control" id="exampleInputPassword1" placeholder="Enter_Street">
+          <div class="form-group col-lg-2">
+            <label for="city">City</label>
+            <input  required class="form-control" id="city" placeholder="Enter_City">
           </div>
            <div class="form-group">
-            <label for="exampleInputEmail1">Country</label>
-            <input  require class="form-control" id="exampleInputEmail1" placeholder="Enter Country">
+            <label for="zip_code">Zip_Code</label>
+            <input type='number' title='Enter a valid Zip_Code' required class="form-control" id="zip_code" placeholder="Enter_Zip_code">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Description</label>
-            <input require class="form-control" id="exampleInputPassword1" placeholder="Enter_Description">
+            <label for="street">Street</label>
+            <input  required class="form-control" id="street" placeholder="Enter_Street">
           </div>
            <div class="form-group">
-            <label for="exampleInputEmail1">Latitude</label>
-            <input require class="form-control" id="exampleInputEmail1" placeholder="Enter Latitude">
-          </div>
-           <div class="form-group">
-            <label for="exampleInputEmail1">User-ID</label>
-            <input  require class="form-control" id="exampleInputEmail1" placeholder="Enter User-id">
+            <label for="country">Country</label>
+            <input  required class="form-control" id="country" placeholder="Enter Country">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Longitude</label>
-            <input  require class="form-control" id="exampleInputPassword1" placeholder="Enter_Longitude">
+            <label for="description">Description</label>
+            <input required class="form-control" id="descrition" placeholder="Enter_Description">
           </div>
+           <div class="form-group">
+            <label for="user_id">User-ID</label>
+            <input  required class="form-control" id="user_id" placeholder="Enter User-id">
+          </div>
+          <div class= 'form-inline'>
+           <div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input required class="form-control" id="latitude" placeholder="Enter Latitude">
+          </div>
+          <div class="form-group">
+            <label for="longitude">Longitude</label>
+            <input  required class="form-control" id="longitude" placeholder="Enter_Longitude">
+          </div>
+        </div>
           <button ="submit" class="btn btn-default">Submit</button>
         </form>
 
