@@ -1,12 +1,21 @@
 <!doctype html>
 <html>
-  <head></head>
+  <head>
+    <style>
+      .map-loaded {
+        height:400px;
+      }
+    </style>
+  </head>
   <body>
     <p>
       <button id="trigger_geolocation">find geolocation</button>
       <div id="coords"></div>
-      <img src="" alt="" id="show_map">
+      <div id="map-canvas"></div>
     </p>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDL5Hrc8qd2Wj-q8YFc8DIfxQq_I49eX4I&sensor=FALSE">
+    </script>
     <script src="showmap.js"></script>
     <script src="geolocation.js"></script>
   </body>
