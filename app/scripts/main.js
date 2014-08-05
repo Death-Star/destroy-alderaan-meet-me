@@ -6,14 +6,16 @@
     },
     displayLocations: function() {
       var locationSection = document.querySelector('#location-list');
-      var el = document.createElement('ul');
-      var data = this.getLocations();
-      for (var i = 0; i < data.length; i++) {
-        el.appendChild(this.createLocation(data[i]));
-      }
+      if (locationSection) {
+        var el = document.createElement('ul');
+        var data = this.getLocations();
+        for (var i = 0; i < data.length; i++) {
+          el.appendChild(this.createLocation(data[i]));
+        }
 
-      locationSection.innerHTML = '';
-      locationSection.appendChild(el);
+        locationSection.innerHTML = '';
+        locationSection.appendChild(el);
+      }
     },
     createLocation: function(data) {
       var el = document.createElement('li');
