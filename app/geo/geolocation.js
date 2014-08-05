@@ -18,8 +18,11 @@ function onSuccess(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
   var coordsArray = [latitude, longitude];
+    console.log(coordsArray);
+
   var displayGeo = document.getElementById('coords');
   displayGeo.innerHTML = ("Lat: " + coordsArray[0] + "<br />Long: " + coordsArray[1]);
+  showTheMap(coordsArray);
 }
 
 function onError(error) {
