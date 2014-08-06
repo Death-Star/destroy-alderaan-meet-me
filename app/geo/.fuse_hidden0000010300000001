@@ -18,6 +18,5 @@
     </script>
     <script src="showmap.js"></script>
     <script src="geolocation.js"></script>
-    <script src="../scripts/lib/tinder.geolocation.js"></script>
   </body>
 </html>
