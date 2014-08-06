@@ -31,19 +31,19 @@ var TinderGeolocation = (function() {
     return error;
   }
 
-  var _getCoords = function(callback) {
+  var _drawMap = function(callback) {
     _requestLocation(callback);
 
   }
 
   return function() {
-    this.getCoords = _getCoords;
+    this.drawMap = _drawMap;
   }
 
 
 })();
 
-var drawMap =function(coords) {
+var Map =function(coords) {
    var mapOptions = {
     zoom: 16,
     center: new google.maps.LatLng(coords[0], coords[1])
@@ -55,4 +55,4 @@ var drawMap =function(coords) {
 
 var tg = new TinderGeolocation();
 
-tg.getCoords(drawMap);
+tg.drawMap(Map);
