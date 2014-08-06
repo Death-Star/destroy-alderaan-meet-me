@@ -20,59 +20,83 @@
     <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">MeetMe</a>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#collapse-target'>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">MeetMe</a>
+        </div>
+        <div class="collapse navbar-collapse" id='collapse-target'>
+          <p class="navbar-text navbar-left">
+          <a href="list.html" class='navbar-link'>Explore</a>
+          </p>
+          <p>
+          <a href='create.html' class="btn btn-info navbar-btn navbar-right">Create a Location</a>
+          </p>
+        </div>
+        </div><!-- /.container -->
+      </nav>
+      <div class="container">
+        <h1 class='text-center'>Add a new location!</h1>
 
-          </div>
-          </div><!-- /.container-fluid -->
-        </nav>
-        <h1>CREATE A NEW LOCATION</h1>
-
-        <form role="form">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input require class="form-control" id="exampleInputEmail1" placeholder="Enter_Name">
+        <form class='form-horizontal col-xs-offset-1 col-xs-10' role="form">
+          <div class='form-group'>
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="name">Name</label>
+            <div class="col-sm-4">
+              <input required class="form-control" id="name" placeholder="Enter_Name">
+            </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">City</label>
-            <input  require class="form-control" id="exampleInputPassword1" placeholder="Enter_City">
-          </div>
-           <div class="form-group">
-            <label for="exampleInputEmail1">Zip_Code</label>
-            <input  require class="form-control" id="exampleInputEmail1" placeholder="Enter_Zip_code">
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="city">City</label>
+            <div class="col-sm-4">
+              <input  required class="form-control" id="city" placeholder="Enter_City">
+            </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Street</label>
-            <input  require class="form-control" id="exampleInputPassword1" placeholder="Enter_Street">
-          </div>
-           <div class="form-group">
-            <label for="exampleInputEmail1">Country</label>
-            <input  require class="form-control" id="exampleInputEmail1" placeholder="Enter Country">
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="zip_code">Zip_Code</label>
+            <div class="col-sm-4">
+              <input type='number' title='Enter a valid Zip_Code' required class="form-control" id="zip_code" placeholder="Enter_Zip_code">
+            </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Description</label>
-            <input require class="form-control" id="exampleInputPassword1" placeholder="Enter_Description">
-          </div>
-           <div class="form-group">
-            <label for="exampleInputEmail1">Latitude</label>
-            <input require class="form-control" id="exampleInputEmail1" placeholder="Enter Latitude">
-          </div>
-           <div class="form-group">
-            <label for="exampleInputEmail1">User-ID</label>
-            <input  require class="form-control" id="exampleInputEmail1" placeholder="Enter User-id">
+            <label for="street" class='col-sm-2 col-sm-offset-2 control-label'>Street</label>
+            <div class="col-sm-4">
+              <input  required class="form-control" id="street" placeholder="Enter_Street">
+            </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Longitude</label>
-            <input  require class="form-control" id="exampleInputPassword1" placeholder="Enter_Longitude">
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="country">Country</label>
+            <div class="col-sm-4">
+              <input  required class="form-control" id="country" placeholder="Enter Country">
+            </div>
           </div>
-          <button ="submit" class="btn btn-default">Submit</button>
+          <div class="form-group">
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="description">Description</label>
+            <div class="col-sm-4">
+              <input required class="form-control" id="descrition" placeholder="Enter_Description">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="user_id">User-ID</label>
+            <div class="col-sm-4">
+              <input  required class="form-control" id="user_id" placeholder="Enter User-id">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class='col-sm-2 col-sm-offset-2 control-label' for="longitude">Coords</label>
+            <div class="col-sm-4">
+              <input required class="col-sm-6" id="latitude" placeholder='latitude'>
+              <input  required class="col-sm-6" id="longitude" placeholder="longitude">
+            </div>
+          </div>
+          <button ="submit" class="btn btn-default col-sm-offset-7">Submit</button>
         </form>
-
-
       </div>
       <!-- build:js scripts/vendor.js -->
       <!-- bower:js -->
